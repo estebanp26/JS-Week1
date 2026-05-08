@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rick & Morty character</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>Rick & Morty character</h1>
+    <select id="filterGender" onchange="filterGender(this.value)">
+        <option value="all">Todos</option>
+        <option value="Male">Male</option>
+        <option value="Female">Female</option>
+        <option value="unknown">Unknown</option>
+    </select>
+
+    <button id="prevPage" data-prev="" onclick="loadMore('prev')">Anterior</button>
+    <button id="loadMore" data-next="" onclick="loadMore('next')">Siguiente</button>
+
+    <p id="pageIndicator"></p>
+    <p id="loading" style="display: none;">Cargando...</p>
+    
+    <div class="cht">
+        <ul id="character"></ul>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="index.js"></script>
+
+</body>
+
+</body>
+
+</html>
